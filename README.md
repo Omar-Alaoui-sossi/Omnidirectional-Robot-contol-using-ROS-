@@ -48,7 +48,7 @@ or add it to the final.launch to launch it automatically as follow :
 
 this project is related to the Robocup international challenge where the aim is the to creat a team of 5 midlesized robot to play a football game,in this github repository I am starting from scratch and I will keep uploading and boosting this project till the end of my academical studies .
 Untill now I managed to finish the conception phase and the control part of the robot's motion,all what is listed previously is coded using xml,yaml,python and bash. 
-All the scripts provided are well commented and i will try to explained it better in the following sections of this readme file .
+All the scripts provided are well commented and i will try to explain it better in the following sections of this readme file .
 
 # Robot Conception:
 
@@ -84,3 +84,12 @@ and by inversing this matrix we achieve the inverse kinematics :
 if you are interseted in the whole calculation prosess I highly recomend you to check this : https://www.researchgate.net/publication/324929202_Motion_Improvement_of_Four-Wheeled_Omnidirectional_Mobile_Robots_for_Indoor_Terrain/fulltext/5aebadf2458515f59981e3b1/Motion-Improvement-of-Four-Wheeled-Omnidirectional-Mobile-Robots-for-Indoor-Terrain.pdf
 
 and : https://www.researchgate.net/publication/308570348_Inverse_kinematic_implementation_of_four-wheels_mecanum_drive_mobile_robot_using_stepper_motors
+
+# Robot omnidirectional motions :
+
+After implementing the inverse kinematics in my launch files I am now able to send info to the cmd_vel topic only and the IK node will compute the rest for me  .but the problem now is how can make my robot move omnidirectionally since now am able to compute all the necessary parametres I need .
+the main parameters to achieve this goal are the theta angle which is the orientation of the robot and the alpha angle which the angle needed to look towardds the goal position .
+in oreder to simplify the issue look at the following illustration :
+<p align="center">
+<img src=https://user-images.githubusercontent.com/91972670/174878614-9c65fb7f-c6f4-4410-a8fb-682a3d323ba4.png >
+</p>
