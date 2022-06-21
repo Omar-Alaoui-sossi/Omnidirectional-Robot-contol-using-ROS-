@@ -42,7 +42,7 @@ for the nodes just type the following command line :
 
 or add it to the final.launch to launch it automatically as follow :
 
-`<node name = "node name" pkg="final_control type="node_name.py output="screen />`
+`<node name = "node name" pkg="final_control" type="node_name.py" output="screen" />`
 
 # Description :
 
