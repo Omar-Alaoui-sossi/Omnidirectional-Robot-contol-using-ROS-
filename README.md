@@ -45,4 +45,4 @@ and by inversing this matrix we achieve the inverse kinematics :
    
 if you are interseted in the whole calculation prosess I highly recomend you to check this : https://www.researchgate.net/publication/324929202_Motion_Improvement_of_Four-Wheeled_Omnidirectional_Mobile_Robots_for_Indoor_Terrain/fulltext/5aebadf2458515f59981e3b1/Motion-Improvement-of-Four-Wheeled-Omnidirectional-Mobile-Robots-for-Indoor-Terrain.pdf
 
-https://www.researchgate.net/publication/308570348_Inverse_kinematic_implementation_of_four-wheels_mecanum_drive_mobile_robot_using_stepper_motors
+and : https://www.researchgate.net/publication/308570348_Inverse_kinematic_implementation_of_four-wheels_mecanum_drive_mobile_robot_using_stepper_motors
