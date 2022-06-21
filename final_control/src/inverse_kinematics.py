@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 __author__='Omar ALAOUI SOSSI'
 #inverse kinematics of an omnidirectional robot = conversion of robot speed motion into wheel speed #
+
+#importing librairies 
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Point
@@ -10,7 +12,7 @@ from tf import transformations
 import numpy as np
 import math
 
-
+#initialization of global parmetres of the robot
 vel=0
 yaw=0
 max_vel_x=4
@@ -28,13 +30,14 @@ def vel_callback(c_vel):
 def clbk_odom(msg):
     global yaw
     quaternion = (
-        msg.pose.pose.orientation.x,
-        msg.pose.pose.orientation.y,
+        msg.pose.pose.orientation.x,                                     #inorder to extract the orinetation info from the robot we need first to extract the quaternion
+        msg.pose.pose.orientation.y,					#then apply an euler transformation that result a list of 3 parameters  roll pitch and yaw									
         msg.pose.pose.orientation.z,
         msg.pose.pose.orientation.w)
     euler = transformations.euler_from_quaternion(quaternion)
     yaw= euler[2]
-
+#so pitch = euler[0] and roll = euler[1]
+	
 def main():
 	global x_dot
 	global y_dot
@@ -55,7 +58,8 @@ def main():
 	omega4 = Float64()
 
 	sub=rospy.Subscriber("/cmd_vel",Twist,vel_callback)
-	pub1=rospy.Publisher("/final/front_right_joint_velocity_controller/command",Float64,queue_size=10)
+	# all this publishers are generated using a yaml controller file situated in final_control/config  
+	pub1=rospy.Publisher("/final/front_right_joint_velocity_controller/command",Float64,queue_size=10) 
 	pub2=rospy.Publisher("/final/front_left_joint_velocity_controller/command",Float64,queue_size=10)
 	pub3=rospy.Publisher("/final/back_right_joint_velocity_controller/command",Float64,queue_size=10)
 	pub4=rospy.Publisher("/final/back_left_joint_velocity_controller/command",Float64,queue_size=10)
@@ -87,13 +91,13 @@ def main():
 			
 		else:
 			theta_dot = vel.angular.z
-			
+		#all the equation bellow are results of inverse kinematics mathematical computation , for deeper info check the readme file	
 		omega1.data = (-np.sin(yaw+1.75*math.pi)*x_dot + np.cos(yaw+1.75*math.pi)*y_dot + base_diag*theta_dot)/wheel_radius
 		omega2.data = (-np.sin(yaw+0.25*math.pi)*x_dot + np.cos(yaw+0.25*math.pi)*y_dot + base_diag*theta_dot)/wheel_radius
 		omega3.data = (-np.sin(yaw+1.25*math.pi)*x_dot + np.cos(yaw+1.25*math.pi)*y_dot + base_diag*theta_dot)/wheel_radius
 		omega4.data = (-np.sin(yaw+0.75*math.pi)*x_dot + np.cos(yaw+0.75*math.pi)*y_dot + base_diag*theta_dot)/wheel_radius
 		
-
+#publishing the angular velocity to each wheel (conversion from robot motion to wheel velocity)
 		pub1.publish(omega1)                                          
 		pub2.publish(omega2)                                          
 		pub3.publish(omega3)                                         
