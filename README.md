@@ -27,7 +27,7 @@ so for better understanding check the photo bellow:
 </p>
 this the base code that will be getting repeated over and over to creat the whole structure:
 <p align="center">
-<img src=https://user-images.githubusercontent.com/91972670/174818882-c24351d8-38d6-4045-bdd5-88d5cbae8ff4.png >
+<img src=https://user-images.githubusercontent.com/91972670/174870565-ea2b0fcf-8f25-42a5-a513-d5deab6fc4fe.png >
 </p>
 ![image](https://user-images.githubusercontent.com/91972670/174817212-23c12200-475f-4413-95f1-e17c7cebdbe5.png)
 
