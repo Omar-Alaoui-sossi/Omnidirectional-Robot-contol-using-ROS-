@@ -63,7 +63,8 @@ this the base code that will be getting repeated over and over to creat the whol
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91972670/174872013-879a91e1-6268-49d0-8600-72370004bf02.png" width="500" height="500" />
 </p>
-check this [tutorial](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch) for more indepth explanation.
+for more indepth explanation check this tutorial:
+``http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch``
 
 # Inverse Kinematics:
 
@@ -81,8 +82,9 @@ and by inversing this matrix we achieve the inverse kinematics :
 <p align="center">
   <img src=https://user-images.githubusercontent.com/91972670/174830730-cf24af80-af49-4b10-83bb-2a9dc060c8b3.png>
 </p>
-if you are interseted in the whole calculation prosess I highly recomend you to check 
-[this](https://www.researchgate.net/publication/324929202_Motion_Improvement_of_Four-Wheeled_Omnidirectional_Mobile_Robots_for_Indoor_Terrain/fulltext/5aebadf2458515f59981e3b1/Motion-Improvement-of-Four-Wheeled-Omnidirectional-Mobile-Robots-for-Indoor-Terrain.pdf).
+if you are interseted in the whole calculation prosess I highly recomend you to check this:
+
+``https://www.researchgate.net/publication/324929202_Motion_Improvement_of_Four-Wheeled_Omnidirectional_Mobile_Robots_for_Indoor_Terrain/fulltext/5aebadf2458515f59981e3b1/Motion-Improvement-of-Four-Wheeled-Omnidirectional-Mobile-Robots-for-Indoor-Terrain.pdf)``
 
 
 and this [link](https://www.researchgate.net/publication/308570348_Inverse_kinematic_implementation_of_four-wheels_mecanum_drive_mobile_robot_using_stepper_motors) also.
