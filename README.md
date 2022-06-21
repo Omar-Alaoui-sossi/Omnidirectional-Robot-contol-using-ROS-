@@ -97,6 +97,7 @@ in oreder to simplify the issue look at the following illustration :
 so it i now clear just some simple trigonometry will solve everything except for the Velocity V it will be choosen by you the user by giving it the maximum value you admire `vel_max`
 
 same methodology for the distance and the alpha angle since we are working in the 2D frame X and Y .
+
 alpha: 
 
 <p align="center">
