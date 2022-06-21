@@ -10,21 +10,21 @@ this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you a
 
 Copy paste the following command lines in your terminal in order to set up your work space  :
 
-`mkdir catkin_ws`
+Catkin workspace folder creation :  `mkdir catkin_ws`
 
-`wstool init src `
+Source forlder initialization:  `wstool init src `
 
-`catkin_make`
+Work space setting up :`catkin_make`
 
-`cd catkin_ws`
+Get in the work space :`cd catkin_ws`
 
-``cd src``
+Then the source folder ``cd src``
 
-``git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git``
+Clone the project: ``git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git``
 
 ``cd ..``
 
-``catkin_make``
+Resetting the work space ``catkin_make``
 
 # Simulation :
 
