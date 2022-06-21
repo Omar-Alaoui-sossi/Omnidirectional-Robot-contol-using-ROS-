@@ -23,7 +23,10 @@ so for better understanding check the photo bellow:
 
 this the base code that will be getting repeated over and over to creat the whole structure:
 
-![carbon](https://user-images.githubusercontent.com/91972670/174817146-ca4be58f-2606-41d0-b97d-cd52b4c9f5b3.png)
+![po](https://user-images.githubusercontent.com/91972670/174818882-c24351d8-38d6-4045-bdd5-88d5cbae8ff4.png)
 ![image](https://user-images.githubusercontent.com/91972670/174817212-23c12200-475f-4413-95f1-e17c7cebdbe5.png)
 
 for more information check the link right here: http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
+
+#Inverse Kinematics:
+in this section i will explain the inverse kinematics computation I adopted to right my python node that executes the inverse kinematics which a conversion from a robot motion into wheel velocity .
