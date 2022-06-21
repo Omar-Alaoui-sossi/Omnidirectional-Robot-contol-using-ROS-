@@ -91,5 +91,9 @@ After implementing the inverse kinematics in my launch files I am now able to se
 the main parameters to achieve this goal are the theta angle which is the orientation of the robot and the alpha angle which the angle needed to look towardds the goal position .
 in oreder to simplify the issue look at the following illustration :
 <p align="center">
-<img src="https://user-images.githubusercontent.com/91972670/174878614-9c65fb7f-c6f4-4410-a8fb-682a3d323ba4.png" width="500" height="500" / >
+<img src="https://user-images.githubusercontent.com/91972670/174878614-9c65fb7f-c6f4-4410-a8fb-682a3d323ba4.png" width="600" height="500" / >
 </p>
+
+so it i now clear just some simple trigonometry will solve everything except for the Velocity V it will be choosen by you the user by giving it the maximum value you admire `vel_max`
+
+same methodology for the distance and the alpha angle since we are working in the 2D frame X and Y .
