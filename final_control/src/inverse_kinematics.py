@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 __author__='Omar ALAOUI SOSSI'
+#inverse kinematics of an omnidirectional robot = conversion of robot speed motion into wheel speed #
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Point
