@@ -9,6 +9,7 @@ this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you a
 # ROS Package Instalation: 
 
 Copy paste the following command lines in your terminal in order to set up your work space  :
+
 `mkdir catkin_ws`
 
 `wstool init src `
@@ -26,8 +27,8 @@ Copy paste the following command lines in your terminal in order to set up your 
 ``catkin_make``
 
 # Simulation :
-after setting up the catking workspace 
-In order to launch the robot in Gazebo use the following command line :
+
+After setting up the catking workspace ,in order to launch the robot in Gazebo use the following command line :
 
 `roslaunch final_gazebo final.launch `
 
@@ -35,6 +36,13 @@ for rviz simulation :
 
 `roslaunch final_description rviz.launch`
 
+for the nodes just type the following command line :
+
+`rosrun final_control [node name]`
+
+or add it to the final.launch as follow :
+
+`<node name = "node name" pkg="final_control type="node_name.py output="screen />`
 
 # Description :
 
