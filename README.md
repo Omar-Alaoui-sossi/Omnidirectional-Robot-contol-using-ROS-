@@ -12,17 +12,26 @@ Copy paste the following command lines in your terminal in order to set up your 
 
 ``
 cd catkin_ws
+
 cd src
+
+
 git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git
+
 cd ..
+
 catkin_make
 ``
 # Simulation :
 after setting up the catking workspace 
 In order to launch the robot in Gazebo use the following command line :
+
 `roslaunch final_gazebo final.launch `
+
 for rviz simulation :
+
 `roslaunch final_description rviz.launch`
+
 
 # Description :
 
