@@ -7,12 +7,12 @@
 
 	<license>BSD</license>
 
-	<url type="website">https://erc-bpgc.github.io/omnibase/</url>
-	<maintainer email="hardesh1deshpande@gmail.com">Harshal Deshpande</maintainer>
-	<maintainer email="mihirk284@gmail.com">Mihir Kulkarni</maintainer>
+	<url type="website">https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git</url>
+	<maintainer email="omarsossi345@gmail.com">Omar Alaoui Sossi</maintainer>
+	
 
 	<author>Harshal Deshpande</author>
-	<author email="mihirk284@gmail.com">Mihir Kulkarni</author>
+	<author email="omarsossi345@gmail.com">Omar Alaoui Sossi</author>
 
 
 	<buildtool_depend>catkin</buildtool_depend>
