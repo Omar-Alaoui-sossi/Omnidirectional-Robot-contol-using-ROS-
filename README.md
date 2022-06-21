@@ -22,7 +22,7 @@ Then the source folder ``cd src``
 
 Clone the project: ``git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git``
 
-``cd ..``
+Going back to the main folder catkin_workspace: ``cd ..``
 
 Resetting the work space ``catkin_make``
 
@@ -40,7 +40,7 @@ for the nodes just type the following command line :
 
 `rosrun final_control [node name]`
 
-or add it to the final.launch as follow :
+or add it to the final.launch to launch it automatically as follow :
 
 `<node name = "node name" pkg="final_control type="node_name.py output="screen />`
 
