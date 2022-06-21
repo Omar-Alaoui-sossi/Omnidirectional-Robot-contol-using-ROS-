@@ -23,7 +23,7 @@ All the scripts provided are well commented and i will try to explained it bette
 In order to creat a robot i used the Urdf syntaxe using XML coding language ,it seems hard in the begining but it become easier and faster to code afterwards.
 so for better understanding check the photo bellow: 
 <p align="center">
-< img src="https://user-images.githubusercontent.com/91972670/174816082-ed457922-fb27-4344-b72e-b7fde29c23d8.png" width="300" height="500" >
+< img src=https://user-images.githubusercontent.com/91972670/174816082-ed457922-fb27-4344-b72e-b7fde29c23d8.png >
 </p>
 this the base code that will be getting repeated over and over to creat the whole structure:
 <p align="center">
@@ -37,17 +37,18 @@ for more information check the link right here: http://wiki.ros.org/urdf/Tutoria
 
 in this section i will explain the inverse kinematics computation I adopted to write my python node that executes the inverse kinematics which is a conversion from a robot motion into wheel velocity .The input of forward kinematics regards the wheels’speed, and the output regards the robot’s velocities 
  to simulate the robot's motion. Converting the four wheels’ speed into the robot’s linear velocity requires the Jacobian matrix . 
- 
-   ![robot](https://user-images.githubusercontent.com/91972670/174830808-97bcdd66-9d69-4114-8dfd-92ae6f779585.PNG)
+ <p align="center">
+  <img src=https://user-images.githubusercontent.com/91972670/174830808-97bcdd66-9d69-4114-8dfd-92ae6f779585.PNG >
+ </p>
 
 for the forawads kinematics the equation looks like the following :
-
-   ![fk](https://user-images.githubusercontent.com/91972670/174830621-9d3207a2-8412-405a-bef7-8d2603910b15.PNG)
-
+<p align="center">
+   <img src=https://user-images.githubusercontent.com/91972670/174830621-9d3207a2-8412-405a-bef7-8d2603910b15.PNG>
+</p>
 and by inversing this matrix we achieve the inverse kinematics :
-
-   ![ik](https://user-images.githubusercontent.com/91972670/174830730-cf24af80-af49-4b10-83bb-2a9dc060c8b3.png)
-   
+<p align="center">
+  <img src=https://user-images.githubusercontent.com/91972670/174830730-cf24af80-af49-4b10-83bb-2a9dc060c8b3.png>
+</p>
 if you are interseted in the whole calculation prosess I highly recomend you to check this : https://www.researchgate.net/publication/324929202_Motion_Improvement_of_Four-Wheeled_Omnidirectional_Mobile_Robots_for_Indoor_Terrain/fulltext/5aebadf2458515f59981e3b1/Motion-Improvement-of-Four-Wheeled-Omnidirectional-Mobile-Robots-for-Indoor-Terrain.pdf
 
 and : https://www.researchgate.net/publication/308570348_Inverse_kinematic_implementation_of_four-wheels_mecanum_drive_mobile_robot_using_stepper_motors
