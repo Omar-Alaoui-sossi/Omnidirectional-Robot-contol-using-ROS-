@@ -17,7 +17,7 @@ state_ = 0
 yaw_precision= math.pi / 90 # +/- 2 degree allowed
 dist_precision= 0.32568956884
 pub = None
-alpha=0.0
+alpha=0
 vel_max=2
 
 def normalize_angle(angle):
