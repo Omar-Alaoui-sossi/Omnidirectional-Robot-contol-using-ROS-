@@ -4,14 +4,14 @@
   <version>0.0.2</version>
   <description>The final_gazebo package</description>
 
-  <maintainer email="hardesh1deshpande@gmail.com">harshal deshpande</maintainer>
-  <maintainer email="mihirk284@gmail.com">Mihir Kulkarni</maintainer>
+  <maintainer email="omarsossi345@gmail.com">Omar Alaoui Sossi </maintainer>
+  
 
   <license>BSD</license>
 
-  <url type="website">https://erc-bpgc.github.io/omnibase/</url>
-  <author email="hardesh1deshpande@gmail.com">Harshal Deshpande</author>
-  <author email="mihirk284@gmail.com">Mihir Kulkarni</author>
+  <url type="website">https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git</url>
+  <author email="omarsossi345@gmail.com">Omar Alaoui Sossi</author>
+  
 
   <buildtool_depend>catkin</buildtool_depend>
   <!-- <buildtool_depend>catkin_simple</buildtool_depend> -->
