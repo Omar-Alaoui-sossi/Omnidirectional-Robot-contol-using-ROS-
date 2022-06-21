@@ -23,7 +23,7 @@ All the scripts provided are well commented and i will try to explained it bette
 In order to creat a robot i used the Urdf syntaxe using XML coding language ,it seems hard in the begining but it become easier and faster to code afterwards.
 so for better understanding check the photo bellow: 
 <p align="center">
-< img src=https://user-images.githubusercontent.com/91972670/174816082-ed457922-fb27-4344-b72e-b7fde29c23d8.png width="300" height="500" >
+< img src="https://user-images.githubusercontent.com/91972670/174816082-ed457922-fb27-4344-b72e-b7fde29c23d8.png" width="300" height="500" >
 </p>
 this the base code that will be getting repeated over and over to creat the whole structure:
 <p align="center">
