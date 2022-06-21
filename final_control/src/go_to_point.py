@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 __author__="Omar ALAOUI SOSSI"
-
+                 # this script is treating our omnidirectional robt as a diff driver robot #
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Point
@@ -33,7 +33,7 @@ def clbk_odom(msg):
         msg.pose.pose.orientation.z,
         msg.pose.pose.orientation.w)
     euler = transformations.euler_from_quaternion(quaternion)
-    yaw_ = euler[2]
+    yaw_ = euler[2] #robor orientation
 
 def change_state(state):
     global state_
@@ -45,12 +45,12 @@ def move(x_,z_):
     twist_msg.angular.z = z_
     pub.publish(twist_msg)
     
-def normalize_angle(angle):
+def normalize_angle(angle):#between pi and -pi
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
 
-def fix_yaw(des_pos):
+def fix_yaw(des_pos): #fixing orientattion yaw equal to the goal postion
     global yaw_, pub, yaw_precision_, state_
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
@@ -65,7 +65,7 @@ def fix_yaw(des_pos):
         move(0.0,0.0)
         change_state(1)
 
-def go_straight_ahead(des_pos):
+def go_straight_ahead(des_pos): # moving toward the goal
 
     global yaw_, pub, yaw_precision_, state_
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
