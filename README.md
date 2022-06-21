@@ -29,4 +29,12 @@ this the base code that will be getting repeated over and over to creat the whol
 for more information check the link right here: http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
 
 #Inverse Kinematics:
-in this section i will explain the inverse kinematics computation I adopted to right my python node that executes the inverse kinematics which a conversion from a robot motion into wheel velocity .
+
+in this section i will explain the inverse kinematics computation I adopted to write my python node that executes the inverse kinematics which is a conversion from a robot motion into wheel velocity .The input of forward kinematics regards the wheels’speed, and the output regards the robot’s velocities 
+ to simulate the robot's motion. Converting the four wheels’ speed into the robot’s linear velocity requires the Jacobian matrix . 
+![robot](https://user-images.githubusercontent.com/91972670/174830808-97bcdd66-9d69-4114-8dfd-92ae6f779585.PNG)
+for the forawads kinematics the equation looks like the following :
+![fk](https://user-images.githubusercontent.com/91972670/174830621-9d3207a2-8412-405a-bef7-8d2603910b15.PNG)
+and by inversing this matrix we achieve the inverse kinematics :
+![ik](https://user-images.githubusercontent.com/91972670/174830730-cf24af80-af49-4b10-83bb-2a9dc060c8b3.png)
+
