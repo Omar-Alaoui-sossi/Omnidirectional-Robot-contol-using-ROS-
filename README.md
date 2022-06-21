@@ -23,14 +23,14 @@ All the scripts provided are well commented and i will try to explained it bette
 In order to creat a robot i used the Urdf syntaxe using XML coding language ,it seems hard in the begining but it become easier and faster to code afterwards.
 so for better understanding check the photo bellow: 
 <p align="center">
-< img src=https://user-images.githubusercontent.com/91972670/174870846-ffe382a8-4a0f-4178-9f0e-381905e133ec.png >
+< img src=https://user-images.githubusercontent.com/91972670/174872130-0dd6ab55-8e27-4502-bc0e-f13c2d55a3e9.png >
 </p>
 this the base code that will be getting repeated over and over to creat the whole structure:
 <p align="center">
 <img src=https://user-images.githubusercontent.com/91972670/174870565-ea2b0fcf-8f25-42a5-a513-d5deab6fc4fe.png >
 </p>
 <p align="center">
-<img src=https://user-images.githubusercontent.com/91972670/174817212-23c12200-475f-4413-95f1-e17c7cebdbe5.png>
+<img src=https://user-images.githubusercontent.com/91972670/174872013-879a91e1-6268-49d0-8600-72370004bf02.png>
 </p>
 for more information check the link right here: http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
 
