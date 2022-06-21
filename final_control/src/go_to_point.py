@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 __author__="Omar ALAOUI SOSSI"
-                 # this script is treating our omnidirectional robt as a diff driver robot #
+                 # this script is treating our omnidirectional robot as a diff driver robot #
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Point
