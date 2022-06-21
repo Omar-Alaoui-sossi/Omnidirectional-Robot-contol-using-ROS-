@@ -63,7 +63,7 @@ this the base code that will be getting repeated over and over to creat the whol
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91972670/174872013-879a91e1-6268-49d0-8600-72370004bf02.png" width="500" height="500" />
 </p>
-for more information I really recomand to follow this [tutorial](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch).
+for more information I really recomand to follow this [tutorial](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch)
 
 # Inverse Kinematics:
 
