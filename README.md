@@ -1,6 +1,7 @@
 # Omnidirectional-Robot-contol-using-ROS-
 
    ![ros](https://user-images.githubusercontent.com/91972670/174807777-7a61a37c-355c-4f28-8c5e-d716ecca9398.jpg)
+![GitHub all releases](https://img.shields.io/github/downloads/Omar-Alaoui-Sossi/Omnidirectional-Robot-contol-using-ROS-/total)
 
 # ROS Package Instalation: 
 
