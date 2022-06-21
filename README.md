@@ -29,8 +29,9 @@ this the base code that will be getting repeated over and over to creat the whol
 <p align="center">
 <img src=https://user-images.githubusercontent.com/91972670/174870565-ea2b0fcf-8f25-42a5-a513-d5deab6fc4fe.png >
 </p>
-![image](https://user-images.githubusercontent.com/91972670/174817212-23c12200-475f-4413-95f1-e17c7cebdbe5.png)
-
+<p align="center">
+<img src=https://user-images.githubusercontent.com/91972670/174817212-23c12200-475f-4413-95f1-e17c7cebdbe5.png>
+</p>
 for more information check the link right here: http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
 
 # Inverse Kinematics:
