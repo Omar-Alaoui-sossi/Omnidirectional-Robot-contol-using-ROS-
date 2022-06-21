@@ -11,17 +11,17 @@ this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you a
 Copy paste the following command lines in your terminal in order to set up your work space  :
 
 ``
-cd catkin_ws
+cd catkin_ws``
 
-cd src
+``cd src``
 
 
-git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git
+``git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git``
 
-cd ..
+``cd ..``
 
-catkin_make
-``
+``catkin_make``
+
 # Simulation :
 after setting up the catking workspace 
 In order to launch the robot in Gazebo use the following command line :
