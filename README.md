@@ -1,6 +1,6 @@
 # Omnidirectional-Robot-contol-using-ROS-
 
-   ![ros](https://user-images.githubusercontent.com/91972670/174807777-7a61a37c-355c-4f28-8c5e-d716ecca9398.jpg)
+   ![image](https://user-images.githubusercontent.com/91972670/174865626-2edb3505-2600-4497-8e95-7cce75de9c61.png)
    
 
 # ROS Package Instalation: 
