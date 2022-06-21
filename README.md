@@ -1,13 +1,16 @@
 # Omnidirectional-Robot-contol-using-ROS-
 
+<p align="center">
    ![image](https://user-images.githubusercontent.com/91972670/174865626-2edb3505-2600-4497-8e95-7cce75de9c61.png)
-   
+</p>   
+
+this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you are running another ROS or Ubuntu distribution you may need to adjust some parameters and configuration .
 
 # ROS Package Instalation: 
 
 git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git
 
-this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you are running another ROS or Ubuntu distribution you may need to adjust some parameters and configuration .
+
 
 # Description :
 
