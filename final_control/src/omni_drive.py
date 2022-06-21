@@ -15,12 +15,18 @@ position = Point()
 yaw = 0
 state_ = 0
 yaw_precision= math.pi / 90 # +/- 2 degree allowed
-dist_precision= 0.32568956884
+dist_precision= 0.32568956884 #for mmore precision increase the rospy Rate
 pub = None
 alpha=0
 vel_max=2
 
-def normalize_angle(angle):
+
+print('###########')
+print("Omni drive activated ")
+print('###########')
+
+#inorder to have an angle that is always between pi and -pi
+def normalize_angle(angle): 
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
@@ -35,15 +41,9 @@ def clbk_odom(msg):
         msg.pose.pose.orientation.z,
         msg.pose.pose.orientation.w)
     euler = transformations.euler_from_quaternion(quaternion)
-    yaw = euler[2]
-    print('###########')
-    print("Omni drive activated ")
-    print('###########')
-
-
-
-
-def go(des_pos_x,des_pos_y):
+    yaw = euler[2] #robor orientation
+   
+def go(des_pos_x,des_pos_y):# the parameteres  of this function are the point of the goal ,it will be given by the user using the sys library
 
     global yaw, pub, yaw_precision, state_,alpha,position,vel_max
 
@@ -61,12 +61,10 @@ def go(des_pos_x,des_pos_y):
         robot_err_x =   np.cos(yaw) * err_pos_x + np.sin(yaw) * err_pos_y
         robot_err_y =   - np.sin(yaw) * err_pos_x + np.cos(yaw) * err_pos_y
         
-
+    #check the project readme for more explanation about the equations used in the code bellow
         alpha = math.atan2(err_pos_y, err_pos_x)
         alpha=normalize_angle(alpha)
-        print('###########')
-        print("Omni drive activated ")
-        print('###########')
+       
 
         distance = math.sqrt(pow(des_pos_y + position.y, 2) + pow(des_pos_x + position.x, 2))
         twist_msg = Twist()
