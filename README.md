@@ -40,6 +40,10 @@ for the nodes just type the following command line :
 
 `rosrun final_control [node name]`
 
+for go to point the goal will be set in the script it self however in the omni drive it will be set by the user like so :
+
+`rosrun final_control oni_drive.py 5.0 3.0`
+
 or add it to the final.launch to launch it automatically as follow :
 
 `<node name = "node name" pkg="final_control" type="node_name.py" output="screen" />`
@@ -66,6 +70,11 @@ this the base code that will be getting repeated over and over to creat the whol
 for more indepth explanation check this tutorial:
 
 `http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch`
+
+# Controllers:
+
+In order to controller each wheel of the robot we need to creat a topic for each one of them so we will be able to pubish the velocity needed,to fulfill this purpose i used velocity controllers ,in ros all the controller are established using yaml language ,and will be implemented in your launch files.
+for more info check this [link](http://wiki.ros.org/robot_mechanism_controllers/JointVelocityController)
 
 # Inverse Kinematics:
 
