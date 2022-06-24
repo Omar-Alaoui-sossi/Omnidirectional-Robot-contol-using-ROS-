@@ -15,7 +15,10 @@ Catkin workspace folder creation :
 mkdir catkin_ws
 ```
 
-Source forlder initialization:  `wstool init src `
+Source forlder initialization:  
+```
+wstool init src 
+```
 
 Work space setting up :`catkin_make`
 
