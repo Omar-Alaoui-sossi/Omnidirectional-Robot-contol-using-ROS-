@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot name="sim" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:arg name="laser_visual" default="false"/>
+  <xacro:arg name="imu_visual"   default="false"/>
+
+ 
+
+    <gazebo reference="front_left_wheel_link">
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+    </gazebo>
+
+    <gazebo reference="front_right_wheel_link">
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+    </gazebo>
+
+    <gazebo reference="back_right_wheel_link">
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+    </gazebo>
+
+    <gazebo reference="back_left_wheel_link">
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+    </gazebo>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>final</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <frameName>world</frameName>
+      <bodyName>base_link</bodyName>
+      <topicName>odom</topicName>
+      <updateRate>30.0</updateRate>
+    </plugin>
+  </gazebo>
+
+
+  <!--gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo-->
+
+  <!--gazebo>
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/</robotNamespace>
+      <leftFrontJoint>front_left_wheel</leftFrontJoint>
+      <rightFrontJoint>front_right_wheel</rightFrontJoint>
+      <leftRearJoint>back_left_wheel</leftRearJoint>
+      <rightRearJoint>back_right_wheel</rightRearJoint>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.215</wheelDiameter>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <torque>20</torque>
+      <topicName>cmd_vel</topicName>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryTopic>odom</odometryTopic>
+      <covariance_x>0.0001</covariance_x>
+      <covariance_y>0001</covariance_y>
+      <covariance_yaw>0.001</covariance_yaw>
+      <broadcastTF>false</broadcastTF>
+    </plugin>
+  </gazebo-->
+
+</robot>
