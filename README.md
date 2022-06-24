@@ -75,6 +75,9 @@ for more indepth explanation check this tutorial:
 
 In order to controller each wheel of the robot we need to creat a topic for each one of them so we will be able to pubish the velocity needed,to fulfill this purpose i used velocity controllers ,in ros all the controller are established using yaml language ,and will be implemented in your launch files.
 for more info check this [link](http://wiki.ros.org/robot_mechanism_controllers/JointVelocityController)
+You may have some problems with controllers so don't forget to install the controllers:
+
+`sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers`
 
 # Inverse Kinematics:
 
