@@ -4,7 +4,7 @@
    <img src=https://user-images.githubusercontent.com/91972670/174865626-2edb3505-2600-4497-8e95-7cce75de9c61.png >  
 </p>
 
-this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you are running another ROS or Ubuntu distribution you may need to adjust some parameters and configuration .
+this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you are running another ROS or Ubuntu distribution you may need to adjust some parameters and configuration , don't forget to downoald all the dependencies and packages.keep reading to recognize all the needed ones.
 
 # ROS Package Instalation: 
 
@@ -20,45 +20,73 @@ Source forlder initialization:
 wstool init src 
 ```
 
-Work space setting up :`catkin_make`
+Work space setting up :
+```
+catkin_make
+```
 
-Get in the work space :`cd catkin_ws`
+Get in the work space :
+```
+cd catkin_ws
+```
 
-Then the source folder ``cd src``
+Then the source folder 
+```
+cd src
+```
 
-Clone the project: ``git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git``
+Clone the project: 
+```
+git clone https://github.com/Omar-Alaoui-sossi/Omnidirectional-Robot-contol-using-ROS-.git
+```
 
-Going back to the main folder catkin_workspace: ``cd ..``
+Going back to the main folder catkin_workspace: 
+```
+cd ..
+```
 
-Resetting the work space ``catkin_make``
+Resetting the work space 
+```
+catkin_make
+```
 
 # Simulation :
 
 After setting up the catking workspace ,in order to launch the robot in Gazebo use the following command line :
 
-`roslaunch final_gazebo final.launch `
+```
+roslaunch final_gazebo final.launch `
+```
 
 for rviz simulation :
 
-`roslaunch final_description rviz.launch`
+```
+roslaunch final_description rviz.launch
+```
 
 for the nodes just type the following command line :
 
-`rosrun final_control [node name]`
+```
+rosrun final_control [node name]
+```
 
 for go to point the goal will be set in the script it self however in the omni drive it will be set by the user like so :
 
-`rosrun final_control oni_drive.py 5.0 3.0`
+```
+rosrun final_control oni_drive.py float1 float2
+```
 
 or add it to the final.launch to launch it automatically as follow :
 
-`<node name = "node name" pkg="final_control" type="node_name.py" output="screen" />`
+```
+<node name = "node name" pkg="final_control" type="node_name.py" output="screen" />
+```
 
 # Description :
 
 this project is related to the Robocup international challenge where the aim is the to creat a team of 5 midlesized robot to play a football game,in this github repository I am starting from scratch and I will keep uploading and boosting this project till the end of my academical studies .
 Untill now I managed to finish the conception phase and the control part of the robot's motion,all what is listed previously is coded using xml,yaml,python and bash. 
-All the scripts provided are well commented and i will try to explain it better in the following sections of this readme file .
+All the scripts provided are well commented and i will try to explain them better in the following sections of this readme file .
 
 # Robot Conception:
 
@@ -75,7 +103,9 @@ this the base code that will be getting repeated over and over to creat the whol
 </p>
 for more indepth explanation check this tutorial:
 
-`http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch`
+```
+http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
+```
 
 # Controllers:
 
@@ -83,7 +113,9 @@ In order to controller each wheel of the robot we need to creat a topic for each
 for more info check this [link](http://wiki.ros.org/robot_mechanism_controllers/JointVelocityController)
 You may have some problems with controllers so don't forget to install the controllers:
 
-`sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers`
+```
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+```
 
 # Inverse Kinematics:
 
