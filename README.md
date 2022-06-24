@@ -11,9 +11,9 @@ this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you a
 Copy paste the following command lines in your terminal in order to set up your work space  :
 
 Catkin workspace folder creation :  
-'''python
-mkdir catkin_ws`
-''' 
+```python
+mkdir catkin_ws
+```
 
 Source forlder initialization:  `wstool init src `
 
