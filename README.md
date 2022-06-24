@@ -103,9 +103,9 @@ this the base code that will be getting repeated over and over to creat the whol
 </p>
 for more indepth explanation check this tutorial:
 
-```
+`
 http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
-```
+`
 
 # Controllers:
 
