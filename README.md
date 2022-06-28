@@ -5,7 +5,15 @@
 </p>
 
 this project is created using ROS Noetic running in an Ubuntu 20.04 ,so if you are running another ROS or Ubuntu distribution you may need to adjust some parameters and configuration , don't forget to downoald all the dependencies and packages.keep reading to recognize all the needed ones.
+If you rae interested in plotting i sudgest plotjuggler it is more practical than rqt_plot install using the follwing command line 
+```
+sudo apt-get install ros-noetic-plotjuggler-ros 
 
+```
+or 
+```
+sudo snap install plotjuggler
+```
 # ROS Package Instalation: 
 
 Copy paste the following command lines in your terminal in order to set up your work space  :
