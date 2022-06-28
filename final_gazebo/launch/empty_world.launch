@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<!-- ARGUMENTS FOR ROBOT INITIAL POSE-->
+	<arg name="x" default="0.0" />
+	<arg name="y" default="0.0" />
+	<arg name="z" default="0.0" />
+	<arg name="roll" default="0.0" />
+	<arg name="pitch" default="0.0" />
+	<arg name="yaw" default="3.14" />
+	
+	<!-- UPLODING THE MAIN URDF FILE PARAMETERS OF THE ROBOT AND ITS CONTROLLERS -->
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find final_description)/xacro/main.urdf.xacro'" />
+	<rosparam file="$(find final_control)/config/controllers.yaml" command="load"/>
+	
+
+	<node pkg="tf" type="static_transform_publisher" name="laser" args="0 0 0 0 0 0 world base_link 10"/>
+
+	<!-- LAUNCHING AN EMPTY WORLD IN GAZEBO  -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="paused" value="false"/>
+		<arg name="gui" value="true"/>
+		<arg name="verbose" value="false"/>
+	</include>	
+
+	<!-- SPAWNING THE ROBOT WITH THE INITIAL POSE ARGUMENTS SET -->
+	<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -model final -param robot_description"/>
+	<!--LAUNCHING THE CONTROLLERS BY NAME EACH OF THIS CONTROLLERS ARE IN THE YAML FILE UNDER A ROBOT NAME SPACE -->
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/final" 
+	args="--namespace=/final
+	joint_state_controller
+	front_right_joint_velocity_controller
+	front_left_joint_velocity_controller
+	back_right_joint_velocity_controller
+	back_left_joint_velocity_controller
+	"/>
+	<!-- LAUNCHING THE ROBOT STATE PUBLISHER NODE SO WE CAN EXTRACT INFO FROM OUR ROBOT JOINTS-->
+	<node
+		name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+		<param name="publish_frequency" type="double" value="30.0"/>
+		<remap from="/joint_states" to="/final/joint_states"/>
+	</node>
+	<!--ROSRUNING THE IK NODE IN THE LAUNCH FILES DIRECTLY INORDER TO AVOID THE BIG NUMBER OF TERMINAL TABS -->
+	<node name ="inverse_kinematics" pkg="final_control" type="inverse_kinematics.py" output="screen"/>
+
+</launch>
